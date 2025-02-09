@@ -135,14 +135,14 @@ footer p a:hover {
 .footer{
     padding-top: 15px;
 }
-.social img{
+.social img {
     padding-top: 15px
 }
 .rivers-card, .camping-card, .rapids-card {
     margin:200px;
 }
-.card-img{
-    border-radius: 10px solid black;    
+.card-img {
+    border: 10px solid black;    
 }
 main section img {
     box-sizing: border-box;

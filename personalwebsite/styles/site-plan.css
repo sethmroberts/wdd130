@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   text-align: center;
 }
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 hr {
   height: 3px;
   margin: 35px 0;
@@ -173,4 +177,10 @@ nav a:hover {
   grid-area: right;
   border-top: 1px solid;
   border-right: 1px solid;
+}
+
+#wireframes img {
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 2%;
 }

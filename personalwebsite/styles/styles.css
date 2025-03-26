@@ -1,65 +1,289 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #333333;
+  --secondary-color: #869D7A;
+  --accent1-color: #A7CDBD;
+  --accent2-color: #CE6C47;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Quicksand";
+  --paragraph-font: "Nunito", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #333333;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #333333; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #333333  ;
+  --nav-link-color: #333333;
+  --nav-background-color: #869D7A;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #333333;
 }
 
-/* Header Styles */
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--primary-color);
+  width: 100vw;
+  box-sizing: border-box;
+  color: var(--accent1-color);
+  margin: 1em 0;
 }
 
-/* Resume Section */
-#resume {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  font-family: var(--paragraph-font)
 }
 
-#resume img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 5px;
-}
-
-/* Contact Section */
-#contact {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#contact a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
+  justify-items: right;
+  background-color: var(--accent2-color);
+  padding: 2em;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+nav a {
+  display: inline-block;
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent1-color);
+  transform: scale(1.1);
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+#landing-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 500px 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: stretch;
+
+}
+
+/* #landing-grid > * {
+  border: 2px solid var(--accent2-color);
+} */
+
+.hero-content {
+  grid-area: 1 / 4 / 3 / 5;
+  text-align: left;
+  padding: 0 1em;
+
+}
+
+.hero-content h1 {
+  font-size: 4em;
+  margin-top: 1em;
+  margin-bottom: .2em;
+  margin-right: 1em;
+  font-weight: 400;
+}
+
+.hero-content h2 {
+  text-align: right;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-right: 1em;
+  font-weight: 400;
+}
+
+.description {
+  display: flex;
+  padding: 0 1em;
+  margin-top: auto;
+  grid-area: 3 / 2 / 4 / 3;
+  text-align: left;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+}
+
+.profile {
+  grid-area: 1 / 3 / 5 / 4;
+  display: flex;
+  align-items: center;
+  justify-items: center; 
+}
+
+.social-links {
+  grid-area: 4 / 2 / 5 / 3;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.flip-container {
+  perspective: 1000px;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.front img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: var(--accent2-color);
+  color: white;
+  padding: 1em;
+  color: var(--primary-color);
+  overflow: hidden;
+}
+
+.back::-webkit-scrollbar {
+  display: none;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+  /* Stack everything in a column layout */
+  #landing-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 1em;
+  }
+
+  /* Resize and center hero content */
+  .hero-content {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+    padding: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2em;
+    margin: 0.5em 0;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  /* Flip card responsiveness */
+  .flip-container {
+    width: 90%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  /* Description and social links centered */
+  .description,
+  .social-links {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .social-links {
+    gap: 1.5em;
+  }
+
+  /* Stack header elements */
+  header {
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2em 1em;
+  }
+  .profile {
+    grid-area: unset;  /* clear grid placement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .profile .flip-container {
+    margin: 0 auto;
+  }
+  
 }

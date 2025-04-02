@@ -3,68 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Projects | Seth Roberts</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Selected Projects | Seth Roberts</title>
+  <link rel="stylesheet" href="../personalwebsite/styles/styles.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="../personalwebsite/images/cowlogo.webp" alt="Logo" width="50" height="auto" />
-      <span>Seth Roberts</span>
+      <img src="../personalwebsite/images/cowlogo.webp" alt="Seth Roberts Logo" width="75">
+      <span>Seth<br>Roberts</span>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-me.html">About Me</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about-me.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Section -->
   <main>
-    <h1>Personal Projects</h1>
+    <section class="my-work">
+      <section class="landing-text">
+        <h1>The Selected Work of Seth Roberts</h1>
+      </section>
 
-    <section class="project-carousel">
+      <section class="project-cards">
 
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <img src="../personalwebsite/images/javascript.jpg" alt="Chrome Extension Project Image" width="300" height="auto"/>
-        <div class="description">
-          <p>Currently, I am working on a Chrome extension to make the Canvas calendar system easier to read. 
-            I have difficulty in school trying to organize all of my classes, and so does my peer. Together we 
-            have started to create an extension that will have an easy-to-use calendar with more features 
-            offered than just the base calendar.</p>
+        <div class="horizontal-divider"></div>
+
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <section class="description">
+            <h2>Unnamed Browser Extension</h2>
+            <p>Currently, I am working on a Chrome extension to make the Canvas calendar system easier to read. 
+              I have difficulty in school trying to organize all of my classes, and so does my peer. Together we 
+              have started to create an extension that will have an easy-to-use calendar with more features 
+              offered than just the base calendar.</p>
+          </section>
+          <div class="divider"></div>
+          <img src="../personalwebsite/images/javascript.jpg" alt="Chrome Extension Project Image" width="300" height="auto"/>
         </div>
-      </div>
+        <div class="horizontal-divider"></div>
 
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <img src="../personalwebsite/images/personal-website.png" alt="Personal Website Image" width="300" height="auto" />
-        <div class="description">
-          <p>This website is a personal project I've been building to share my work and practice my front-end skills. 
-            I wanted a space that feels like me, with some fun features like an interactive cow and a flip-card resume. 
-            It's still evolving as I learn more and try new ideas.</p>
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <section class="description">
+            <h2>Personal Website</h2>
+            <p>This website is a personal project I've been building to share my work and practice my front-end skills. 
+              I wanted a space that feels like me, with some fun features like an interactive cow and a flip-card resume. 
+              It's still evolving as I learn more and try new ideas.</p>
+          </section>
+          <div class="divider"></div>
+          <img src="../personalwebsite/images/personal-website.png" alt="Personal Website Image" width="300" height="auto" />
         </div>
-      </div>
+        <div class="horizontal-divider"></div>
 
-      <!-- Project Card 3 -->
-      <div class="project-card">
-        <img src="../personalwebsite/images/coming-soon.webp" alt="Coming Soon Image" width="300" height="auto"/>
-        <div class="description">
-          <p>I've got a few ideas in the works that I'm really excited about—this space is just waiting to be filled. 
-            Stay tuned for something new as I continue exploring and building!</p>
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <section class="description">
+            <h2>MossBeats</h2>
+            <p>MossBeats is a little project I built to analyze a playlist of songs using the Spotify API. It reads a list 
+              of songs from a file, then grabs their BPMs, and builds a BPM curve showing the range. Eventually, 
+              I want it to organize songs into a smoother flow based on tempo—kind of like a smart playlist shuffler that 
+              makes transitions feel more natural.</p>
+          </section>
+          <div class="divider"></div>
+          <img src="../personalwebsite/images/dj.jpg" alt="MossBeats Image" width="300" height="auto"/>
         </div>
-      </div>
 
+      </section>
     </section>
-
-    <!-- See More Button -->
-    <div class="see-more-container">
-      <button class="see-more">See More</button>
-      <!-- Optional: Add dropdown here later -->
-    </div>
   </main>
 
   <!-- Footer -->

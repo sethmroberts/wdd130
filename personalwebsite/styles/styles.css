@@ -49,7 +49,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   width: 100vw;
   box-sizing: border-box;
   color: var(--accent1-color);
@@ -358,6 +358,13 @@ nav ul {
   background-color: var(--secondary-color);
   color: var(--paragraph-color-on-white);
   align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 

@@ -427,16 +427,15 @@ nav ul {
   .profile .flip-container {
     margin: 0 auto;
   }
+}
   
-  @media (max-width: 900px) {
-    .about-cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .arrow {
-      display: none; /* optional: hide arrows on small screens */
-    }
+@media (max-width: 900px) {
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
   }
 
+  .arrow {
+    display: none; /* optional: hide arrows on small screens */
+  }
 }

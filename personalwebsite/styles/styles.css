@@ -317,11 +317,26 @@ nav ul {
 */
 
 .hero-banner {
+  position: relative;
   width: 100vw;
+  height: auto;
+  overflow: hidden;
 }
 
 .hero-banner img {
   width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--background-color);
+  font-size: 6em;
 }
 
 .about-cards {
